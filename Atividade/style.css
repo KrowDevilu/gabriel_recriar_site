@@ -1,0 +1,80 @@
+body {
+    background-image: url("img/body-bg.jpg");
+    background-repeat: no-repeat;
+    background-color: #0d1424;
+    max-width: 1200;
+    margin: 40px 100px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.sobre a,
+.links a {
+    text-decoration: none;
+}
+
+.griding {
+    display: grid;
+    grid-template: 10vh 5vh 25vh 20vh 175vh 5vh/3fr 2fr;
+    gap: 4vh;
+    grid-template-areas: "titulo titulo" "menus menus" "main sobre" "main links" "main void" "footer footer";
+    grid-gap: 1;
+}
+
+.titulo {
+    grid-area: titulo;
+    color: white;
+}
+
+.menu {
+    list-style: none;
+    grid-area: menus;
+    background-color: rgb(8, 70, 128);
+    background: linear-gradient(0deg, rgb(226, 226, 226) 0%, rgb(78, 78, 78) 100%);
+    border-radius: 10px;
+    align-items: center;
+    padding: 0px 10px 0px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu li {
+    font-size: 15px;
+    display: inline-block;
+    padding: 0px 30px;
+    color: white;
+}
+
+.menu input {
+    align-self: center;
+    border-radius: 5px;
+    border: none;
+    height: 20px;
+}
+
+main {
+    align-content: center;
+    grid-area: main;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px 20px 10px 20px;
+}
+
+.sobre {
+    grid-area: sobre;
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px 20px;
+}
+
+.links {
+    grid-area: links;
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px 20px;
+}
+
+footer {
+    grid-area: footer;
+    color: rgb(72, 189, 235);
+}
